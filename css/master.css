@@ -753,7 +753,7 @@ h2 {
 .work {
   position: relative;
   width: 100%;
-  min-height: 40rem;
+  min-height: 35rem;
   margin-bottom: 2rem;
   text-align: center;
   transition: var(--transition);
@@ -879,7 +879,6 @@ h2 {
   padding-top: 1.7rem;
   margin-bottom: 0.5rem;
   overflow: scroll;
-  max-height: 40%;
   scrollbar-width: none;
   line-height: 1;
 }
