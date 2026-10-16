@@ -117,7 +117,6 @@ h2 {
 .header-area .links li a:hover,
 .header-area .theme-btn:hover {
   color: #1274d5;
-  transform: translateY(-2px);
   transition: 0.3s ease;
 }
 .header-area .toggle-menu {
@@ -132,15 +131,6 @@ h2 {
   background-color: var(--btn-color);
   height: 0.25rem;
   margin-bottom: 0.5rem;
-}
-.toggle-menu.active .top {
-  transform: rotate(-132deg) translate(-0.8rem, -0.6rem);
-}
-.toggle-menu.active .middle {
-  opacity: 0;
-}
-.toggle-menu.active .bottom {
-  transform: rotate(-48deg) translate(0.4rem, -0.4rem);
 }
 @media (max-width: 870px) {
   .header-area .container {
@@ -481,8 +471,12 @@ h2 {
   .tilt-wrapper .pop2,
   .tilt-wrapper .pop3,
   .tilt-wrapper .pop4 {
-    width: 3.25rem;
-    height: 3.25rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  .tilt-wrapper .pop3 {
+    bottom: 3rem;
+    right: -3.25rem;
   }
   .tilt-wrapper .pop1 img,
   .tilt-wrapper .pop2 img,
@@ -491,8 +485,6 @@ h2 {
     width: 2.2rem;
     height: 2.2rem;
   }
-}
-@media (max-width: 480px) {
 }
 /* End Home Page */
 .about-me {
@@ -513,11 +505,11 @@ h2 {
   background-size: 200% auto;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3.5rem;
-  margin-bottom: 2rem;
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
   display: inline-block;
   position: relative;
-  letter-spacing: 3px;
+  letter-spacing: 6px;
 }
 .about-image {
   rotate: -6deg;
@@ -539,12 +531,12 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  padding: 2.5rem;
+  padding: 2rem;
 }
 .info-box h3 {
   color: var(--heading-color);
   font-size: 1.875rem;
-  line-height: 2.25rem;
+  line-height: 2rem;
   font-weight: 600;
   letter-spacing: 2px;
 }
@@ -558,8 +550,9 @@ h2 {
   letter-spacing: 2px;
 }
 .info-box p {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
   color: var(--text-color);
 }
 .about-me .btn {
@@ -580,8 +573,15 @@ h2 {
 @media (max-width: 870px) {
 }
 @media (max-width: 480px) {
+  .info-box h3 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  .info-box {
+    padding: 1.25rem;
+  }
   .info-box p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 1.2;
   }
 }
@@ -787,6 +787,7 @@ h2 {
 .work .project .project-text h4 {
   color: var(--btn-color);
   font-size: 1.2rem;
+  letter-spacing: 2px;
   margin: 0.5rem 0;
 }
 .work .project .project-text p {
@@ -1183,10 +1184,10 @@ form .button-area {
 .reviews .heading::before {
   content: "";
   position: absolute;
-  height: 5px;
+  height: 4px;
   width: 0%;
   left: 0;
-  bottom: -7px;
+  bottom: -6px;
   background-color: var(--heading-color);
   animation: underlineGrow 4s infinite linear;
 }
@@ -1219,7 +1220,7 @@ form .button-area {
 }
 #scroll-top {
   position: absolute;
-  padding: 1.1rem 0.7rem;
+  padding: 1rem 0.75rem;
   background: var(--main-color);
   color: var(--btn-color);
   border-radius: var(--border-radius);
@@ -1321,9 +1322,10 @@ form .button-area {
   }
   .about-me h2,
   .experience .heading,
-  .reviews h2,
+  .reviews .heading,
   .contact h2,
   .work .work-heading {
-    font-size: 2.5rem;
+    letter-spacing: 3px;
+    font-size: 2rem;
   }
 }
